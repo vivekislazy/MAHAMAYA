@@ -1,0 +1,53 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Mahamaya//Puja Guide//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:mahalaya-2026@mahamaya
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20261010
+DTEND;VALUE=DATE:20261011
+SUMMARY:Mahalaya - Durga Puja
+DESCRIPTION:Planning date only. Ritual observance varies by panjika. Confirm locally.
+END:VEVENT
+BEGIN:VEVENT
+UID:shashthi-2026@mahamaya
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20261016
+DTEND;VALUE=DATE:20261017
+SUMMARY:Maha Shashthi - Durga Puja
+DESCRIPTION:Planning date only. Ritual observance varies by panjika. Confirm locally.
+END:VEVENT
+BEGIN:VEVENT
+UID:saptami-2026@mahamaya
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20261018
+DTEND;VALUE=DATE:20261019
+SUMMARY:Maha Saptami - Durga Puja
+DESCRIPTION:Planning date only. Ritual observance varies by panjika. Confirm locally.
+END:VEVENT
+BEGIN:VEVENT
+UID:ashtami-2026@mahamaya
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20261019
+DTEND;VALUE=DATE:20261020
+SUMMARY:Maha Ashtami - Durga Puja
+DESCRIPTION:Planning date only. Ritual observance varies by panjika. Confirm locally.
+END:VEVENT
+BEGIN:VEVENT
+UID:navami-2026@mahamaya
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20261020
+DTEND;VALUE=DATE:20261021
+SUMMARY:Maha Navami - Durga Puja
+DESCRIPTION:Planning date only. Ritual observance varies by panjika. Confirm locally.
+END:VEVENT
+BEGIN:VEVENT
+UID:dashami-2026@mahamaya
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20261021
+DTEND;VALUE=DATE:20261022
+SUMMARY:Vijaya Dashami - Durga Puja
+DESCRIPTION:Planning date only. Ritual observance varies by panjika. Confirm locally.
+END:VEVENT
+END:VCALENDAR

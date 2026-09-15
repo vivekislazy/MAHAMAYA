@@ -1,0 +1,149 @@
+{
+  "project_name": "Mahamaya - High-Tech Durga Puja Cultural Experience",
+  "theme_identity": {
+    "archetype": "Sacred Luxury & Cyber-Kinetic Art (E1 Anti-AI Fusion)",
+    "primary_palette": {
+      "vermilion_red": "#C8102E",
+      "vermilion_glow": "#E63946",
+      "antique_gold": "#D4AF37",
+      "gold_metallic": "#F3E5AB",
+      "warm_ivory": "#FDFBF7",
+      "deep_obsidian": "#0B090A",
+      "temple_charcoal": "#161A1D"
+    },
+    "emotional_tone": "Devotional awe, cinematic wonder, high-energy festival warmth, futuristic digital preservation",
+    "target_audience": "Global travelers, Bengali diaspora, culture enthusiasts, digital art admirers"
+  },
+  "typography": {
+    "display_serif": {
+      "family": "'Cormorant Garamond', 'Playfair Display', serif",
+      "weights": ["300", "500", "700"],
+      "usage": "Main H1 headings, chapter titles, mantra verses, hero kinetic reveals"
+    },
+    "body_sans": {
+      "family": "'Outfit', 'Plus Jakarta Sans', sans-serif",
+      "weights": ["400", "500", "600"],
+      "usage": "Paragraphs, card content, itinerary list, travel tips"
+    },
+    "tech_mono": {
+      "family": "'JetBrains Mono', 'Space Mono', monospace",
+      "weights": ["400", "700"],
+      "usage": "Timestamps, map coordinates, 2026 calendar dates, audio frequency display, UI tags"
+    },
+    "hierarchy_rules": {
+      "H1": "text-4xl sm:text-5xl lg:text-6xl tracking-tight leading-tight font-serif",
+      "H2": "text-2xl sm:text-3xl lg:text-4xl font-serif text-amber-100",
+      "H3": "text-xl sm:text-2xl font-sans font-semibold text-amber-400",
+      "H4": "text-lg sm:text-xl font-sans font-medium",
+      "Overline": "text-xs tracking-[0.25em] uppercase font-mono text-amber-500/80"
+    }
+  },
+  "colors": {
+    "css_variables": {
+      "background": "0 0% 4%",
+      "foreground": "40 30% 98%",
+      "primary": "350 85% 42%",
+      "primary-foreground": "0 0% 100%",
+      "secondary": "45 65% 52%",
+      "secondary-foreground": "0 0% 5%",
+      "card": "0 0% 7%",
+      "card-foreground": "40 30% 96%",
+      "border": "45 30% 20%",
+      "ring": "45 80% 50%"
+    },
+    "accessibility_rules": "All body text must achieve > 4.5:1 APCA contrast ratio. Dark cards must use tinted grey (#161A1D) instead of pure black. Dropdowns and fixed header MUST have dark backdrop opacity with backdrop-blur-xl (never pure transparent)."
+  },
+  "layout_and_grids": {
+    "hero_section": "Kinetic line reveal with layered 3D particle divine canvas backdrop, audio toggle floating top right, and split editorial manifesto callout",
+    "bento_grid": "Mode A (Tetris Grid) for Pandal showcase & 2026 Puja dates (8-col desktop layout with asymmetric hero cell span-8, tall audio cell span-4)",
+    "map_layout": "Interactive split view: Left pane containing Leaflet/OpenStreetMap with custom nocturnal golden pins; Right pane containing Pandal detail drawer, crowd status & itinerary builder",
+    "pandal_3d_canvas": "Full-bleed interactive WebGL/Three.js or procedural Canvas chamber with click-to-move, 360 camera rotater, pranam flower offering interactive button, and dynamic temple lighting switch"
+  },
+  "visual_enhancers": {
+    "dot_matrix_mesh_cursor": "Canvas overlay following mouse cursor with interactive dotted matrix particle web (Antigravity-inspired effect with gold/red spring tension)",
+    "shimmer_tracing_beam": "Glowing golden gradient line animated around featured Pandal cards and interactive CTA buttons",
+    "editorial_marquee": "Slow drifting low-contrast serif text running smoothly across section boundaries with react-fast-marquee or framer motion",
+    "texture_overlay": "Subtle noise grain CSS background to eliminate flat digital gradients and mimic traditional terracotta & paper texture"
+  },
+  "motion_and_interactions": {
+    "lenis_scroll": "Smooth momentum scrolling enabled globally via Lenis for weight and fluidity",
+    "framer_motion": {
+      "page_transitions": "Fade and slight scale-up reveal on tab/page change",
+      "text_reveal": "Masked line-by-line clip path reveal for H1 headlines",
+      "card_hover": "Hover lift -translate-y-1.5 with golden inner shadow glow"
+    },
+    "sound_effects": "Web Audio API synth or audio sample triggers for button clicks, pranam offerings, and dhak drum tap interactions"
+  },
+  "media_assets": {
+    "photos": [
+      {
+        "category": "Durga Idol & Shrine",
+        "url": "https://images.unsplash.com/photo-1603602612488-e8370535c00a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzV8MHwxfHNlYXJjaHw0fHxrb2xrYXRhJTIwZmVzdGl2YWwlMjBsaWdodGluZyUyMHRlbXBsZSUyMGdvbGQlMjBpZG9sfGVufDB8fHx8MTc4OTQ2NTEwNHww&ixlib=rb-4.1.0&q=85",
+        "alt": "Gold Hindu deity Durga Puja idol with traditional red textile"
+      },
+      {
+        "category": "Pandal Lighting & Crowd",
+        "url": "https://images.unsplash.com/photo-1728493118702-febd0b9a0fab?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzV8MHwxfHNlYXJjaHwzfHxrb2xrYXRhJTIwZmVzdGl2YWwlMjBsaWdodGluZyUyMHRlbXBsZSUyMGdvbGQlMjBpZG9sfGVufDB8fHx8MTc4OTQ2NTEwNHww&ixlib=rb-4.1.0&q=85",
+        "alt": "Illuminated Kolkata Durga Puja Pandal hall with festive lights"
+      },
+      {
+        "category": "Dhak Drums & Bengali Musicians",
+        "url": "https://images.unsplash.com/photo-1759738102510-ec524f666274?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHwxfHxiZW5nYWxpJTIwY3VsdHVyZSUyMGRoYWslMjBpbnN0cnVtZW50JTIwY2VsZWJyYXRpb24lMjBpbmRpYW4lMjBmZXN0aXZhbHxlbnwwfHx8fDE3ODk0NjUwOTh8MA&ixlib=rb-4.1.0&q=85",
+        "alt": "Traditional Bengali Dhaki drum dancers performing"
+      },
+      {
+        "category": "Festive Street Dhak Beats",
+        "url": "https://images.unsplash.com/photo-1774438463584-4e312bbc2c4e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzV8MHwxfHNlYXJjaHw0fHxiZW5nYWxpJTIwY3VsdHVyZSUyMGRoYWslMjBpbnN0cnVtZW50JTIwY2VsZWJyYXRpb24lMjBpbmRpYW4lMjBmZXN0aXZhbHxlbnwwfHx8fDE3ODk0NjUwOTh8MA&ixlib=rb-4.1.0&q=85",
+        "alt": "Street celebration during Durga Puja with red drums"
+      },
+      {
+        "category": "Divine Lamps & Diya",
+        "url": "https://images.unsplash.com/photo-1636226942649-ee15d2a7ce04?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzZ8MHwxfHNlYXJjaHwzfHxpbmRpYW4lMjBmZXN0aXZhbCUyMGxhbXAlMjBsaWdodHMlMjBuaWdodCUyMHJlZCUyMHdhcm18ZW58MHx8fHwxNzg5NDY1MTA0fDA&ixlib=rb-4.1.0&q=85",
+        "alt": "Lit brass lamps and diyas placed during evening Sandhya Aarti"
+      }
+    ],
+    "audio_tracks": [
+      {
+        "title": "Mahishasuramardini - Birendra Krishna Bhadra (Mahalaya Classic)",
+        "artist": "AIR Kolkata Classic",
+        "type": "Mahalaya Chandi Path",
+        "youtube_id": "r7K20N_S7gE"
+      },
+      {
+        "title": "Dhak Rhythm & Kasi Beats",
+        "artist": "Kolkata Master Dhakis",
+        "type": "Traditional Percussion",
+        "youtube_id": "d13_2j2m5yE"
+      },
+      {
+        "title": "Aguner Poroshmoni / Agomoni Songs Collection",
+        "artist": "Bengali Folk & Agomoni",
+        "type": "Devotional Playlist",
+        "youtube_id": "8VqK-N1YnKw"
+      }
+    ]
+  },
+  "pages_and_components": {
+    "Navbar": "Sticky glassmorphism header (`backdrop-blur-xl bg-black/70 border-b border-amber-500/20`), Language Toggle (English/Bengali), Audio Mute/Play Floating Widget, Section Links, 'Explore 3D Pandal' primary CTA",
+    "HeroSection": "Large kinetic title 'MAHAMAYA 2026' with subline 'The Sovereign Divine Awakening of Kolkata', line-by-line reveal animation, interactive dot matrix canvas, quick stats (3000+ Pandals, 5 Days of Magic), CTA buttons with golden tracing beam",
+    "StorytellingSection": "Interactive Mahishasuramardini Chapter Flow (Origin of Chandi, Creation of 10 Weapons, War with Mahishasura, Victory & Immersion) + Live AI Story Generator powered by Emergent API",
+    "PandalExplorerMap": "Interactive OpenStreetMap (Leaflet.js) centered at Kolkata with dark nocturnal styling, search by area (North Kolkata / South Kolkata / Salt Lake), filter by UNESCO heritage vs modern theme, itinerary pin saver",
+    "Pandal3DSimulator": "Interactive 3D Pandal Walkthrough with 360-degree virtual view, step-inside camera zoom, light/dark mood toggle, flower offering (Pranam) animation counter, and audio mantra play",
+    "MusicSanctum": "Audio player with Bengali Puja song playlists, interactive Dhak drum simulator keyboard, and traditional Aarti soundboard",
+    "GallerySection": "Filterable image grid (Traditional Pandals, Lighting Art, Dhaki Performers, Idol Sculpting) with full-screen lightbox, zoom, and location tag",
+    "PujaCalendar2026": "Interactive 2026 Date Guide (Maha Sasthi Oct 16 to Maha Dashami Oct 20, 2026), daily rituals breakdown, tourist survival tips, emergency contacts, local street food recommendations"
+  },
+  "instructions_to_main_agent": {
+    "framework": "React JS (Create React App + Craco)",
+    "styling": "Tailwind CSS with Lucide React icons, Framer Motion for micro-interactions, Leaflet/React-Leaflet for maps",
+    "data_testid_requirement": "EVERY interactive element (buttons, tabs, language switcher, audio controls, map markers, form inputs) MUST include a clear kebab-case data-testid attribute. E.g., data-testid='language-toggle-btn', data-testid='pandal-map-search-input', data-testid='enter-3d-pandal-btn'.",
+    "responsive_rules": "Ensure mobile-first layout with smooth touch controls. Mobile images must not exceed max-h-[80vh]."
+  },
+  "UNIVERSAL GUIDELINES FOR MAIN AGENT": [
+    "Avoid generic AI slop: Use rich vermilion red, antique gold accents, dark obsidian background, and high-contrast typography.",
+    "Do NOT use pure transparent background in dropdowns, headers, or overlays. Always use dark backdrop opacity with backdrop-blur-xl.",
+    "Do NOT apply transition: all globally. Add specific transitions like transition-colors or transition-transform.",
+    "Ensure all buttons, inputs, audio toggles, map markers, and cards contain data-testid attributes.",
+    "Provide seamless toggling between English and Bengali UI labels across all sections."
+  ]
+}
