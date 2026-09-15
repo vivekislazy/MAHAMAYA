@@ -1,0 +1,71 @@
+{
+  "summary": "Completed frontend-only regression of upgraded cursor, alpona motion, 3D sanctuary interactions, translations, and responsive behavior on the public URL. Most core flows pass; a few motion-state and reliability issues remain.",
+  "backend_issues": {
+    "critical": [],
+    "minor": []
+  },
+  "frontend_issues": {
+    "ui_bugs": [
+      {
+        "component": "Experience motion controls",
+        "issue": "Reduced-motion dynamic toggle is inconsistent: after switching from reduced->no-preference in-session, pause button sometimes stays disabled.",
+        "selector": "[data-testid='pause-sanctuary-motion']",
+        "priority": "HIGH"
+      }
+    ],
+    "integration_issues": [
+      {
+        "flow": "Visibility/offscreen auto-pause",
+        "issue": "In one reproducible automation scenario, scene data-animated stayed true after page lost focus (new tab brought front). Requirement expects auto-pause/resume.",
+        "affected_selectors": [
+          "[data-testid='sanctuary-renderer']"
+        ]
+      },
+      {
+        "flow": "Explore navigation reliability during long run",
+        "issue": "Intermittent timeout waiting for Explore map after nav click in long sequential tests. Later smoke navigation succeeded, so this appears flaky but should be investigated.",
+        "affected_selectors": [
+          "[data-testid='nav-explore']",
+          "[data-testid='pandal-map']"
+        ]
+      }
+    ],
+    "design_issues": [
+      {
+        "screen": "Experience mobile (390x844)",
+        "issues": [
+          "Bottom scene-control labels are very small and low-prominence on dense 3D background; readability/accessibility risk on mobile."
+        ]
+      }
+    ]
+  },
+  "test_report_links": [
+    "/app/test_reports/iteration_2.json",
+    "/root/.emergent/automation_output/20260915_162842/console_20260915_162842.log",
+    "/root/.emergent/automation_output/20260915_162925/console_20260915_162925.log",
+    "/root/.emergent/automation_output/20260915_163306/console_20260915_163306.log"
+  ],
+  "action_items": [
+    "Fix dynamic reduced-motion state propagation so controls and scene animation state always update immediately when OS preference changes.",
+    "Verify/fix offscreen visibility handling so Sanctuary animation reliably pauses when tab/page becomes hidden and resumes on return.",
+    "Investigate intermittent Explore route readiness under long session transitions (possible route transition/timing race).",
+    "Optional UX polish: increase mobile control text size/contrast in Experience bottom bar."
+  ],
+  "critical_code_review_comments": [
+    "FestivalCursor native-target guard is broad and correct in intent, but map-cursor behavior should be validated with a deterministic e2e test because runtime verification was flaky.",
+    "Sanctuary motion control depends on runtime reduced-motion and visibility signals; current behavior appears non-deterministic across transitions, indicating state synchronization risk between React state and browser media/visibility events.",
+    "Repeated WebGL console warnings (GPU stall due to ReadPixels) and context-lost logs observed during long interaction runs; not always user-blocking, but a stability/perf warning worth profiling."
+  ],
+  "updated_files": [
+    "/app/test_reports/iteration_2.json"
+  ],
+  "success_rate": {
+    "backend": "N/A (skipped: frontend-only request)",
+    "frontend": "87%"
+  },
+  "seed_data_creation": "None",
+  "retest_needed": true,
+  "should_main_agent_self_test": false,
+  "context_for_next_testing_agent": "Validated PASS: tilted trishul visibility, -18deg base tilt, spear-tip transform-origin, click-count increment, hide on textarea/disabled/webgl, gallery lightbox+Tab, 3 hotspots to 03/03, ritual/altar switching, lamps toggle, flowers gating+post-offer lock, reset, expand/Escape, EN/BN ritual-related labels, reduced-motion disables cursor+alpona+scene animation, mobile/tablet rendering and fit checks. Unresolved/flaky: reduced-motion re-enable consistency, visibility auto-pause, intermittent Explore map readiness in long run.",
+  "rca of the issue": "RCA (likely): motion behavior is controlled by multiple async signals (useReducedMotion hook, motionEnabled local state, IntersectionObserver visibility, document.visibility). During fast preference/page transitions, these sources may desynchronize briefly, leaving pause button disabled or data-animated stale. Reproduction: enter Experience -> emulate/trigger reduced motion -> return to no-preference without full remount in same session -> observe pause button may remain disabled. Visibility check: switching foreground to another tab/page did not always flip data-animated false. Mitigation: centralize animation eligibility in one derived state with explicit media-query and visibility listeners, and force recomputation/remount on reduced-motion preference change."
+}

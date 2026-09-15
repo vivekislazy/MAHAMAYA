@@ -1,149 +1,182 @@
 {
-  "project_name": "Mahamaya - High-Tech Durga Puja Cultural Experience",
-  "theme_identity": {
-    "archetype": "Sacred Luxury & Cyber-Kinetic Art (E1 Anti-AI Fusion)",
-    "primary_palette": {
-      "vermilion_red": "#C8102E",
-      "vermilion_glow": "#E63946",
-      "antique_gold": "#D4AF37",
-      "gold_metallic": "#F3E5AB",
-      "warm_ivory": "#FDFBF7",
-      "deep_obsidian": "#0B090A",
-      "temple_charcoal": "#161A1D"
-    },
-    "emotional_tone": "Devotional awe, cinematic wonder, high-energy festival warmth, futuristic digital preservation",
-    "target_audience": "Global travelers, Bengali diaspora, culture enthusiasts, digital art admirers"
-  },
   "typography": {
-    "display_serif": {
-      "family": "'Cormorant Garamond', 'Playfair Display', serif",
-      "weights": ["300", "500", "700"],
-      "usage": "Main H1 headings, chapter titles, mantra verses, hero kinetic reveals"
-    },
-    "body_sans": {
-      "family": "'Outfit', 'Plus Jakarta Sans', sans-serif",
-      "weights": ["400", "500", "600"],
-      "usage": "Paragraphs, card content, itinerary list, travel tips"
-    },
-    "tech_mono": {
-      "family": "'JetBrains Mono', 'Space Mono', monospace",
-      "weights": ["400", "700"],
-      "usage": "Timestamps, map coordinates, 2026 calendar dates, audio frequency display, UI tags"
-    },
-    "hierarchy_rules": {
-      "H1": "text-4xl sm:text-5xl lg:text-6xl tracking-tight leading-tight font-serif",
-      "H2": "text-2xl sm:text-3xl lg:text-4xl font-serif text-amber-100",
-      "H3": "text-xl sm:text-2xl font-sans font-semibold text-amber-400",
-      "H4": "text-lg sm:text-xl font-sans font-medium",
-      "Overline": "text-xs tracking-[0.25em] uppercase font-mono text-amber-500/80"
+    "heading_font": "'Cormorant Garamond', serif",
+    "body_font": "'Outfit', sans-serif",
+    "bengali_font": "'Noto Serif Bengali', serif",
+    "heading_weights": [400, 500, 600, 700],
+    "body_weights": [300, 400, 500, 600],
+    "hierarchy": {
+      "h1": "text-4xl sm:text-5xl lg:text-6xl tracking-tight leading-tight",
+      "h2": "text-2xl sm:text-3xl lg:text-4xl tracking-tight leading-snug",
+      "h3": "text-xl sm:text-2xl font-medium",
+      "h4": "text-lg sm:text-xl font-normal",
+      "body": "text-base sm:text-sm leading-relaxed",
+      "caption": "text-xs tracking-wider uppercase"
     }
   },
   "colors": {
-    "css_variables": {
-      "background": "0 0% 4%",
-      "foreground": "40 30% 98%",
-      "primary": "350 85% 42%",
-      "primary-foreground": "0 0% 100%",
-      "secondary": "45 65% 52%",
-      "secondary-foreground": "0 0% 5%",
-      "card": "0 0% 7%",
-      "card-foreground": "40 30% 96%",
-      "border": "45 30% 20%",
-      "ring": "45 80% 50%"
-    },
-    "accessibility_rules": "All body text must achieve > 4.5:1 APCA contrast ratio. Dark cards must use tinted grey (#161A1D) instead of pure black. Dropdowns and fixed header MUST have dark backdrop opacity with backdrop-blur-xl (never pure transparent)."
-  },
-  "layout_and_grids": {
-    "hero_section": "Kinetic line reveal with layered 3D particle divine canvas backdrop, audio toggle floating top right, and split editorial manifesto callout",
-    "bento_grid": "Mode A (Tetris Grid) for Pandal showcase & 2026 Puja dates (8-col desktop layout with asymmetric hero cell span-8, tall audio cell span-4)",
-    "map_layout": "Interactive split view: Left pane containing Leaflet/OpenStreetMap with custom nocturnal golden pins; Right pane containing Pandal detail drawer, crowd status & itinerary builder",
-    "pandal_3d_canvas": "Full-bleed interactive WebGL/Three.js or procedural Canvas chamber with click-to-move, 360 camera rotater, pranam flower offering interactive button, and dynamic temple lighting switch"
+    "background_light": "#FAF7F0",
+    "background_warm_ivory": "#F7F0E3",
+    "vermilion_red": "#922523",
+    "crimson_accent": "#B6102A",
+    "antique_gold": "#B9944E",
+    "gold_highlight": "#D8AC60",
+    "terracotta_sandstone": "#842831",
+    "terracotta_light": "#914028",
+    "obsidian_night": "#21110D",
+    "obsidian_surface": "#221811",
+    "text_dark": "#302820",
+    "text_muted": "#746653",
+    "contrast_ratios": {
+      "vermilion_on_ivory": "7.2:1 (WCAG AAA)",
+      "gold_border_on_obsidian": "4.8:1 (WCAG AA)",
+      "text_dark_on_ivory": "11.5:1 (WCAG AAA)"
+    }
   },
   "visual_enhancers": {
-    "dot_matrix_mesh_cursor": "Canvas overlay following mouse cursor with interactive dotted matrix particle web (Antigravity-inspired effect with gold/red spring tension)",
-    "shimmer_tracing_beam": "Glowing golden gradient line animated around featured Pandal cards and interactive CTA buttons",
-    "editorial_marquee": "Slow drifting low-contrast serif text running smoothly across section boundaries with react-fast-marquee or framer motion",
-    "texture_overlay": "Subtle noise grain CSS background to eliminate flat digital gradients and mimic traditional terracotta & paper texture"
-  },
-  "motion_and_interactions": {
-    "lenis_scroll": "Smooth momentum scrolling enabled globally via Lenis for weight and fluidity",
-    "framer_motion": {
-      "page_transitions": "Fade and slight scale-up reveal on tab/page change",
-      "text_reveal": "Masked line-by-line clip path reveal for H1 headlines",
-      "card_hover": "Hover lift -translate-y-1.5 with golden inner shadow glow"
+    "glassmorphism": {
+      "topbar": "backdrop-blur-xl bg-[#221811]/85 border-b border-[#977754]/30",
+      "popup": "backdrop-blur-md bg-[#F7F0E3]/95 border border-[#B49A6B] shadow-2xl"
     },
-    "sound_effects": "Web Audio API synth or audio sample triggers for button clicks, pranam offerings, and dhak drum tap interactions"
+    "textures": {
+      "grain_overlay": "subtle SVG noise texture overlay on canvas background for tactile paper/clay feel",
+      "gold_foil": "metallic linear gradient (gold -> amber -> gold) on borders and trishul accents"
+    },
+    "canvas_environment": {
+      "background_color": "#21110D",
+      "fog": "fog attach='fog' args={['#21110d', 18, 45]}",
+      "ambient_sound": "shakuhachi/bells audio toggle integrated in Header with persistent state"
+    }
   },
-  "media_assets": {
-    "photos": [
+  "tilted_trishul_cursor": {
+    "component": "CursorMesh in /app/frontend/src/components/Shell.jsx & /app/frontend/src/components/Cursor.css",
+    "angle": "-18deg default tilt for natural hand-held angle",
+    "color": "#D8AC60 with radial gold outer glow (#E6A833)",
+    "click_flourish": {
+      "rotation_thrust": "-32deg on active mousedown state",
+      "scale_pulse": "scale(1.2) -> scale(0.95) transition on click",
+      "particle_burst": "Generates 8 expanding golden spark dots along the trishul tips on mouse click",
+      "retained_mesh": "Preserves existing 11x11 subtle golden dot grid following cursor position with smooth lerp movement (factor 0.1)"
+    },
+    "accessibility": "Disabled on touch screens (@media (pointer: coarse)) and reduced motion preferences"
+  },
+  "rotating_alpona_accents": {
+    "placements": [
       {
-        "category": "Durga Idol & Shrine",
-        "url": "https://images.unsplash.com/photo-1603602612488-e8370535c00a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzV8MHwxfHNlYXJjaHw0fHxrb2xrYXRhJTIwZmVzdGl2YWwlMjBsaWdodGluZyUyMHRlbXBsZSUyMGdvbGQlMjBpZG9sfGVufDB8fHx8MTc4OTQ2NTEwNHww&ixlib=rb-4.1.0&q=85",
-        "alt": "Gold Hindu deity Durga Puja idol with traditional red textile"
+        "location": "Sanctuary 3D Floor",
+        "position": "[0, 0.02, -5.5]",
+        "rotation": "[-Math.PI / 2, 0, continuous Z-rotation]",
+        "description": "Slowly rotating traditional Bengali floral alpona mandala plane directly underneath the idol altar"
       },
       {
-        "category": "Pandal Lighting & Crowd",
-        "url": "https://images.unsplash.com/photo-1728493118702-febd0b9a0fab?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzV8MHwxfHNlYXJjaHwzfHxrb2xrYXRhJTIwZmVzdGl2YWwlMjBsaWdodGluZyUyMHRlbXBsZSUyMGdvbGQlMjBpZG9sfGVufDB8fHx8MTc4OTQ2NTEwNHww&ixlib=rb-4.1.0&q=85",
-        "alt": "Illuminated Kolkata Durga Puja Pandal hall with festive lights"
-      },
-      {
-        "category": "Dhak Drums & Bengali Musicians",
-        "url": "https://images.unsplash.com/photo-1759738102510-ec524f666274?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHwxfHxiZW5nYWxpJTIwY3VsdHVyZSUyMGRoYWslMjBpbnN0cnVtZW50JTIwY2VsZWJyYXRpb24lMjBpbmRpYW4lMjBmZXN0aXZhbHxlbnwwfHx8fDE3ODk0NjUwOTh8MA&ixlib=rb-4.1.0&q=85",
-        "alt": "Traditional Bengali Dhaki drum dancers performing"
-      },
-      {
-        "category": "Festive Street Dhak Beats",
-        "url": "https://images.unsplash.com/photo-1774438463584-4e312bbc2c4e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzV8MHwxfHNlYXJjaHw0fHxiZW5nYWxpJTIwY3VsdHVyZSUyMGRoYWslMjBpbnN0cnVtZW50JTIwY2VsZWJyYXRpb24lMjBpbmRpYW4lMjBmZXN0aXZhbHxlbnwwfHx8fDE3ODk0NjUwOTh8MA&ixlib=rb-4.1.0&q=85",
-        "alt": "Street celebration during Durga Puja with red drums"
-      },
-      {
-        "category": "Divine Lamps & Diya",
-        "url": "https://images.unsplash.com/photo-1636226942649-ee15d2a7ce04?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzZ8MHwxfHNlYXJjaHwzfHxpbmRpYW4lMjBmZXN0aXZhbCUyMGxhbXAlMjBsaWdodHMlMjBuaWdodCUyMHJlZCUyMHdhcm18ZW58MHx8fHwxNzg5NDY1MTA0fDA&ixlib=rb-4.1.0&q=85",
-        "alt": "Lit brass lamps and diyas placed during evening Sandhya Aarti"
+        "location": "Page Intro Background",
+        "position": "Fixed corner accents in Experience.jsx and Home.jsx",
+        "description": "SVG mandala with 60s slow continuous rotation, opacity 0.15"
       }
     ],
-    "audio_tracks": [
-      {
-        "title": "Mahishasuramardini - Birendra Krishna Bhadra (Mahalaya Classic)",
-        "artist": "AIR Kolkata Classic",
-        "type": "Mahalaya Chandi Path",
-        "youtube_id": "r7K20N_S7gE"
-      },
-      {
-        "title": "Dhak Rhythm & Kasi Beats",
-        "artist": "Kolkata Master Dhakis",
-        "type": "Traditional Percussion",
-        "youtube_id": "d13_2j2m5yE"
-      },
-      {
-        "title": "Aguner Poroshmoni / Agomoni Songs Collection",
-        "artist": "Bengali Folk & Agomoni",
-        "type": "Devotional Playlist",
-        "youtube_id": "8VqK-N1YnKw"
-      }
-    ]
+    "motion_specification": {
+      "speed": "45 seconds per full 360-degree rotation",
+      "reduced_motion": "Static opacity without rotation if prefers-reduced-motion is active"
+    }
   },
-  "pages_and_components": {
-    "Navbar": "Sticky glassmorphism header (`backdrop-blur-xl bg-black/70 border-b border-amber-500/20`), Language Toggle (English/Bengali), Audio Mute/Play Floating Widget, Section Links, 'Explore 3D Pandal' primary CTA",
-    "HeroSection": "Large kinetic title 'MAHAMAYA 2026' with subline 'The Sovereign Divine Awakening of Kolkata', line-by-line reveal animation, interactive dot matrix canvas, quick stats (3000+ Pandals, 5 Days of Magic), CTA buttons with golden tracing beam",
-    "StorytellingSection": "Interactive Mahishasuramardini Chapter Flow (Origin of Chandi, Creation of 10 Weapons, War with Mahishasura, Victory & Immersion) + Live AI Story Generator powered by Emergent API",
-    "PandalExplorerMap": "Interactive OpenStreetMap (Leaflet.js) centered at Kolkata with dark nocturnal styling, search by area (North Kolkata / South Kolkata / Salt Lake), filter by UNESCO heritage vs modern theme, itinerary pin saver",
-    "Pandal3DSimulator": "Interactive 3D Pandal Walkthrough with 360-degree virtual view, step-inside camera zoom, light/dark mood toggle, flower offering (Pranam) animation counter, and audio mantra play",
-    "MusicSanctum": "Audio player with Bengali Puja song playlists, interactive Dhak drum simulator keyboard, and traditional Aarti soundboard",
-    "GallerySection": "Filterable image grid (Traditional Pandals, Lighting Art, Dhaki Performers, Idol Sculpting) with full-screen lightbox, zoom, and location tag",
-    "PujaCalendar2026": "Interactive 2026 Date Guide (Maha Sasthi Oct 16 to Maha Dashami Oct 20, 2026), daily rituals breakdown, tourist survival tips, emergency contacts, local street food recommendations"
+  "stylized_animated_worshipper": {
+    "component": "WorshipperMesh component inside Sanctuary.jsx Scene",
+    "position": "[1.4, 0, -3.2] (side profile facing the altar)",
+    "visual_style": "Stylized, respectful silhouette / low-poly artisan mesh wrapped in warm terracotta drape (#842831)",
+    "pose": "Traditional Aarti stance holding a smoking brass Dhunuchi (incense burner)",
+    "animation": {
+      "swaying": "Subtle breathing/swaying motion (Math.sin(clock.elapsedTime * 1.1) * 0.04) on vertical and rotation axes",
+      "incense_particles": "Rising smoke particle stream using custom geometry or point particles moving upward with opacity decay",
+      "lamp_flicker": "PointLight at dhunuchi location with random intensity variance (intensity = 8 + Math.sin(t * 12) * 2.5) casting flickering glow on worshipper and floor"
+    }
   },
-  "instructions_to_main_agent": {
-    "framework": "React JS (Create React App + Craco)",
-    "styling": "Tailwind CSS with Lucide React icons, Framer Motion for micro-interactions, Leaflet/React-Leaflet for maps",
-    "data_testid_requirement": "EVERY interactive element (buttons, tabs, language switcher, audio controls, map markers, form inputs) MUST include a clear kebab-case data-testid attribute. E.g., data-testid='language-toggle-btn', data-testid='pandal-map-search-input', data-testid='enter-3d-pandal-btn'.",
-    "responsive_rules": "Ensure mobile-first layout with smooth touch controls. Mobile images must not exceed max-h-[80vh]."
+  "richer_3d_pandal": {
+    "materials": {
+      "pillars": "MeshStandardMaterial with sandstone color #B86B4D, roughness 0.5, with decorative golden rings (#B9944E, metalness 0.7, roughness 0.25)",
+      "floor": "Carved terracotta floor with golden inlay borders (#871A26 carpet, #842831 side panels)",
+      "altar": "Carved wood/stone stepped altar with brass trim (#BB874D, metalness 0.4)",
+      "drapes": "Deep vermilion silk drapery panels along side walls (#842831 with gold fringe #E9C676)"
+    },
+    "offerings": {
+      "brass_thali": "Golden circular thali (#B9944E, metalness 0.8) at altar base [0, 0.58, -4.8]",
+      "prasadam": "Subtle geometry representing traditional Bengali sweets (sandesh/rasgulla spheres) on the thali",
+      "garlands": "Dual marigold flower strands draped around shrine pillars using yellow (#E9A234) and orange (#E56029) bead clusters",
+      "incense": "Dhunuchi burners placed near altar emitting floating smoke particles and warm amber light"
+    },
+    "lighting": {
+      "ambient": "Warm golden ambient light (color='#FFDDAF', intensity=1.35 when lit, 0.5 when dim)",
+      "directional": "Key top spotlight shining down on Goddess idol (color='#FFDCB3', intensity=2.8)",
+      "point_lights": "6 traditional brass Pradip oil lamps lining pathway with warm flame geometry and pointLight (color='#FFB955', intensity=9, distance=6)",
+      "flicker_effect": "Low frequency flickering effect on diya light sources for realistic flame ambiance"
+    }
   },
+  "grids_and_layouts": {
+    "container_padding": "Generous spacing philosophy (p-6, p-8, p-12, gap-8)",
+    "canvas_frame": {
+      "default_height": "620px desktop / 500px mobile",
+      "expanded_height": "Fixed full viewport overlay (fixed inset-0 z-55)",
+      "topbar": "Height 53px, flex items-center, gap-30px",
+      "bottombar": "Flex gap-20px, space-between, padding 20px 25px"
+    }
+  },
+  "motion": {
+    "library": "Framer Motion & Lenis smooth scroll",
+    "camera_controls": "@react-three/drei CameraControls with smoothTime=0.8, minDistance=2, maxDistance=23",
+    "transitions": "Specific CSS transitions (transform 0.2s ease, opacity 0.3s ease), NEVER transition: all"
+  },
+  "accessibility": {
+    "contrast": "All text elements exceed 4.5:1 WCAG AA standards",
+    "reduced_motion": "All canvas animations, cursor flourishes, and rotating alpona motifs respect prefers-reduced-motion media query",
+    "keyboard_navigation": "Interactive buttons have visible focus outlines (outline: 2px solid #B6102A, offset 5px)",
+    "test_ids": "Mandatory data-testid attribute retained on all interactive controls, buttons, hotspots, and popups"
+  },
+  "image_urls": [
+    {
+      "url": "https://images.unsplash.com/photo-1640281694730-df0af5ca7bd2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzh8MHwxfHNlYXJjaHwyfHxkdXJnYSUyMHB1amElMjBwYW5kYWwlMjBmZXN0aXZhbCUyMGdvbGQlMjBsaWdodGluZ3xlbnwwfHx8fDE3ODk0ODg4MjF8MA&ixlib=rb-4.1.0&q=85",
+      "category": "hero_sanctuary_idol",
+      "description": "Golden Durga Puja Goddess idol photograph inside virtual sanctuary altar",
+      "used_in": "/app/frontend/src/components/Sanctuary.jsx (AltarImage texture)"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1634237135397-f12f18ebb97c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzh8MHwxfHNlYXJjaHwzfHxkdXJnYSUyMHB1amElMjBwYW5kYWwlMjBmZXN0aXZhbCUyMGdvbGQlMjBsaWdodGluZ3xlbnwwfHx8fDE3ODk0ODg4MjF8MA&ixlib=rb-4.1.0&q=85",
+      "category": "pandal_architecture",
+      "description": "Traditional illuminated Durga Puja pandal decor with archways and golden lights",
+      "used_in": "/app/frontend/src/pages/Explore.jsx & Guide.jsx card media"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1633368516165-f7b04d6428d1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODl8MHwxfHNlYXJjaHwxfHxpbmRpYW4lMjBicmFzcyUyMGRpeWElMjBvaWwlMjBsYW1wJTIwZmVzdGl2YWwlMjBsaWdodGluZ3xlbnwwfHx8fDE3ODk0ODg4NDN8MA&ixlib=rb-4.1.0&q=85",
+      "category": "ritual_lamps",
+      "description": "Lit brass oil lamp illuminating sacred space during evening aarti",
+      "used_in": "/app/frontend/src/pages/Experience.jsx discovery modal & story media"
+    }
+  ],
+  "component_path": [
+    "/app/frontend/src/components/Sanctuary.jsx",
+    "/app/frontend/src/pages/Experience.jsx",
+    "/app/frontend/src/components/Shell.jsx",
+    "/app/frontend/src/pages/Experience.css",
+    "/app/frontend/src/components/Cursor.css"
+  ],
+  "instructions_to_main_agent": [
+    "Upgrade Sanctuary.jsx with detailed materials, offerings (thali, garlands, sweets), dhunuchi incense smoke particles, rotating floor alpona mesh, and a stylized worshipper mesh.",
+    "Upgrade CursorMesh in Shell.jsx and Cursor.css with a tilted golden trishul SVG icon, smooth dot-mesh follow, and click flourish with spark particles and rotation thrust.",
+    "Add rotating alpona SVG accents in background sections with reduced-motion fallback.",
+    "Ensure all existing interactive functions (Enter/Exit, Hotspots [idol, craft, lamp], Lamp toggle, Flower offering, Reset, Expand) remain 100% operational.",
+    "Preserve all existing data-testid attributes (world-enter, hotspot-idol, hotspot-craft, hotspot-lamp, toggle-pandal-lights, offer-flowers, reset-sanctuary, enter-pandal, expand-sanctuary, discovery-popup, site-header, main-navigation, etc.).",
+    "Maintain English default with Bengali option toggle across all UI strings.",
+    "Ensure total responsive fidelity across mobile, tablet, and desktop viewports."
+  ],
   "UNIVERSAL GUIDELINES FOR MAIN AGENT": [
-    "Avoid generic AI slop: Use rich vermilion red, antique gold accents, dark obsidian background, and high-contrast typography.",
-    "Do NOT use pure transparent background in dropdowns, headers, or overlays. Always use dark backdrop opacity with backdrop-blur-xl.",
-    "Do NOT apply transition: all globally. Add specific transitions like transition-colors or transition-transform.",
-    "Ensure all buttons, inputs, audio toggles, map markers, and cards contain data-testid attributes.",
-    "Provide seamless toggling between English and Bengali UI labels across all sections."
+    "Avoid generic centered layouts, simplistic gradients, and uniform styling.",
+    "Create depth through layered design elements with z-index hierarchy.",
+    "Use glass-morphism effects with backdrop filters (12-24px blur).",
+    "You MUST NOT apply universal transition. Eg: transition: all.",
+    "You MUST NOT center align the app container, i.e., do not add .App { text-align: center; }.",
+    "Always use modern button styles like pill-shaped, or sharp button with interaction animations & color relevant to the app style.",
+    "NEVER use AI assistant Emoji characters like 🤖🧠💭💡🔮🎯 for icons.",
+    "Every interaction needs micro-animations - hover states, transitions, parallax effects, and entrance animations.",
+    "Use 2-3x more spacing than feels comfortable.",
+    "Subtle grain textures, noise overlays, custom cursors, selection states, and loading animations separate good from extraordinary.",
+    "All interactive and key informational elements MUST include data-testid attribute."
   ]
 }

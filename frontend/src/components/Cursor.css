@@ -1,50 +1,9 @@
-/* The central spear tip is the exact click point. A native SVG cursor stays
-   responsive without a second animation loop; the existing mesh is unchanged. */
-@media (hover: hover) and (pointer: fine) {
-  body,
-  body * {
-    cursor: url('../assets/trishul-cursor.svg') 16 2, auto;
-  }
-
-  body a,
-  body button,
-  body [role='button'],
-  body label[for],
-  body select,
-  body input[type='button'],
-  body input[type='submit'],
-  body input[type='checkbox'],
-  body input[type='radio'] {
-    cursor: url('../assets/trishul-cursor.svg') 16 2, pointer;
-  }
-
-  /* Keep familiar affordances where the pointer communicates an operation. */
-  body input:where(:not([type='button']):not([type='submit']):not([type='checkbox']):not([type='radio']):not([type='range']):not([type='color'])),
-  body textarea,
-  body [contenteditable='true'],
-  body [contenteditable='true'] * {
-    cursor: text;
-  }
-
-  body :disabled,
-  body :disabled *,
-  body [aria-disabled='true'],
-  body [aria-disabled='true'] * {
-    cursor: not-allowed;
-  }
-
-  body .leaflet-grab,
-  body .leaflet-grab .leaflet-tile-container,
-  body .leaflet-grab .leaflet-tile {
-    cursor: grab;
-  }
-
-  body .leaflet-dragging,
-  body .leaflet-dragging * {
-    cursor: grabbing;
-  }
-
-  body input[type='range'] {
-    cursor: ew-resize;
-  }
+.festival-cursor,.festival-cursor-mesh{position:fixed;left:0;top:0;pointer-events:none!important;opacity:0;visibility:hidden;z-index:2147483646}
+.festival-cursor{width:32px;height:40px;will-change:transform}
+.festival-cursor-mesh{width:100vw;height:100vh;z-index:2147483645}
+.festival-cursor .trishul-symbol{width:32px;height:40px;object-fit:contain;transform:rotate(-18deg);transform-origin:16px 2px;filter:drop-shadow(0 1px 2px #67491630);pointer-events:none!important}
+@media(hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){
+  html.trishul-active,html.trishul-active body,html.trishul-active body *{cursor:none!important}
+  .festival-cursor[data-visible=true],.festival-cursor-mesh[data-visible=true]{opacity:1;visibility:visible}
 }
+@media(pointer:coarse),(prefers-reduced-motion:reduce){.festival-cursor,.festival-cursor-mesh{display:none!important}}

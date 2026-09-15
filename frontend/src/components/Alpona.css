@@ -1,0 +1,10 @@
+.alpona-decoration{position:absolute;pointer-events:none;user-select:none;aspect-ratio:1}
+.alpona-decoration img{width:100%;height:100%;object-fit:contain}
+.alpona-turn{animation:alpona-orbit 75s linear infinite}
+.hero-art>.hero-alpona{width:125%;left:-12.5%;top:-10%;opacity:.38;z-index:0}
+.page-intro{isolation:isolate}
+.page-intro>div:not(.alpona-decoration){position:relative;z-index:1}
+.page-intro>.page-alpona{width:260px;right:4%;top:-4px;opacity:.25;z-index:0}
+@keyframes alpona-orbit{to{transform:rotate(360deg)}}
+@media(max-width:767px){.hero-art>.hero-alpona{width:120%;left:-10%;top:-9%;opacity:.35}.page-intro>.page-alpona{width:180px;right:-35px;top:8px;opacity:.24}}
+@media(prefers-reduced-motion:reduce){.alpona-turn{animation:none!important}}

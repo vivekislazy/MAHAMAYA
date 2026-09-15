@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { ArrowUpRight, ArrowRight, Flower2 } from 'lucide-react';
 import { Button } from './ui/button';
 import { useApp } from '../context';
+import { Alpona } from './Alpona';
 
 export const photos = {
   hero: 'https://images.unsplash.com/photo-1634066844026-40a34d6f36c0?auto=format&fit=crop&w=1400&q=85',
@@ -19,7 +20,7 @@ export const Reveal = ({ children, className='', delay=0 }) => <motion.div class
 export const Eyebrow = ({ children, id='chapter-label' }) => <div data-testid={id} className="eyebrow"><span className="tiny-star">✳</span>{children}</div>;
 export const Action = ({ to, children, id, light=false, className='' }) => <Button asChild className={`action ${light?'action-light':''} ${className}`} data-testid={id}><Link to={to}>{children}<ArrowUpRight size={17}/></Link></Button>;
 export const TextLink = ({ to, children, id }) => <Link className="text-link" to={to} data-testid={id}>{children}<ArrowRight size={17}/></Link>;
-export const PageIntro = ({ chapter, title, italic, description }) => <header className="page-intro" data-testid="page-intro"><Reveal><Eyebrow>{chapter}</Eyebrow><h1 data-testid="page-title">{title} <em>{italic}</em></h1><p data-testid="page-description">{description}</p></Reveal><Flower2 className="intro-flower" strokeWidth={.5}/></header>;
+export const PageIntro = ({ chapter, title, italic, description }) => <header className="page-intro" data-testid="page-intro"><Reveal><Eyebrow>{chapter}</Eyebrow><h1 data-testid="page-title">{title} <em>{italic}</em></h1><p data-testid="page-description">{description}</p></Reveal><Alpona className="page-alpona" id="page-alpona"/></header>;
 export const DataState = () => {
   const {loading,error,t,retry} = useApp();
   return loading ? <div className="loading-state" data-testid="data-loading"><Flower2 className="spin"/>{t('Gathering a little wonder…','উৎসবের আয়োজন হচ্ছে…')}</div> : error ? <div className="error-state" data-testid="data-error"><p>{t(error,'তথ্য লোড হয়নি। আবার চেষ্টা করুন।')}</p><Button data-testid="retry-data" onClick={retry}>{t('Try again','আবার চেষ্টা করুন')}</Button></div> : null;

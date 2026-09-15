@@ -4,7 +4,7 @@ import {Menu, X, Volume2, VolumeX, ArrowUpRight} from 'lucide-react';
 import Lenis from 'lenis';
 import {useApp} from '../context';
 import {Eyes} from './shared';
-import './Cursor.css';
+export {FestivalCursor as CursorMesh} from './FestivalCursor';
 
 const nav = [['/explore','Pandal explorer','পুজো পরিক্রমা'],['/experience','The 3D experience','ত্রিমাত্রিক অভিজ্ঞতা'],['/story','Her story','মায়ের কাহিনি'],['/music','Sounds of Pujo','পুজোর সুর'],['/gallery','Gallery','চিত্রশালা']];
 export const Header = () => {
@@ -25,19 +25,4 @@ export const SmoothScroll = () => {
   },[]);
   useEffect(()=>{ref.current?.scrollTo(0,{immediate:true});window.scrollTo(0,0);},[location.pathname]);
   return null;
-};
-export const CursorMesh = () => {
-  const ref=useRef();
-  useEffect(()=>{
-    if(matchMedia('(pointer: coarse), (prefers-reduced-motion: reduce)').matches) return;
-    const canvas=ref.current,ctx=canvas.getContext('2d'); let x=-300,y=-300,cx=-300,cy=-300,frame;
-    const resize=()=>{canvas.width=innerWidth;canvas.height=innerHeight;}; resize();
-    const move=e=>{x=e.clientX;y=e.clientY;};
-    const draw=()=>{cx+=(x-cx)*.1;cy+=(y-cy)*.1;ctx.clearRect(0,0,canvas.width,canvas.height);
-      for(let a=-5;a<=5;a++)for(let b=-5;b<=5;b++){const d=Math.hypot(a,b);if(d>5)continue;const dx=cx+a*14,dy=cy+b*14;ctx.fillStyle=`rgba(166,115,54,${(1-d/6)*.43})`;ctx.beginPath();ctx.arc(dx,dy,.85,0,7);ctx.fill();}
-      frame=requestAnimationFrame(draw);
-    };draw(); window.addEventListener('mousemove',move);window.addEventListener('resize',resize);
-    return ()=>{cancelAnimationFrame(frame);window.removeEventListener('mousemove',move);window.removeEventListener('resize',resize);};
-  },[]);
-  return <canvas ref={ref} className="cursor-mesh" data-testid="cursor-mesh" aria-hidden="true"/>;
 };
