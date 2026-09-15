@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="40" viewBox="0 0 32 40" fill="none">
+  <defs>
+    <path id="trishul" d="M16 7V36M6.5 5.5C4.1 13.1 8.2 19 16 19C23.8 19 27.9 13.1 25.5 5.5M6.5 5.5L5.4 9.7M6.5 5.5L8.3 9M25.5 5.5L26.6 9.7M25.5 5.5L23.7 9M13.5 24H18.5M14.5 36H17.5"/>
+  </defs>
+  <use href="#trishul" stroke="#faf7f0" stroke-opacity=".8" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M16 2L13.6 8H18.4L16 2Z" fill="#a98046" stroke="#faf7f0" stroke-width=".7" stroke-linejoin="round"/>
+  <use href="#trishul" stroke="#a98046" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -4,6 +4,7 @@ import {Menu, X, Volume2, VolumeX, ArrowUpRight} from 'lucide-react';
 import Lenis from 'lenis';
 import {useApp} from '../context';
 import {Eyes} from './shared';
+import './Cursor.css';
 
 const nav = [['/explore','Pandal explorer','পুজো পরিক্রমা'],['/experience','The 3D experience','ত্রিমাত্রিক অভিজ্ঞতা'],['/story','Her story','মায়ের কাহিনি'],['/music','Sounds of Pujo','পুজোর সুর'],['/gallery','Gallery','চিত্রশালা']];
 export const Header = () => {
@@ -38,5 +39,5 @@ export const CursorMesh = () => {
     };draw(); window.addEventListener('mousemove',move);window.addEventListener('resize',resize);
     return ()=>{cancelAnimationFrame(frame);window.removeEventListener('mousemove',move);window.removeEventListener('resize',resize);};
   },[]);
-  return <canvas ref={ref} className="cursor-mesh" aria-hidden="true"/>;
+  return <canvas ref={ref} className="cursor-mesh" data-testid="cursor-mesh" aria-hidden="true"/>;
 };

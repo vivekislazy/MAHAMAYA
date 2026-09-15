@@ -45,6 +45,7 @@ build me a hi tech durga puja website where all 3d premium themes and fonts used
 - Files under /app/test_reports include regression tests' JUnit output, screenshot checks, downloaded ICS/TXT, final build output. Agent added only backend regression test + report, no production modifications.
 
 ## Prioritized backlog / next tasks
+- Completed cursor refinement: user requested a minimal antique-gold trishul while retaining the existing dotted mesh. Custom 32×40 SVG native cursor, tip hotspot (16,2), fine-pointer/hover devices only. Source: `frontend/src/assets/trishul-cursor.svg`, `frontend/src/components/Cursor.css`, imported by Shell. Text, disabled, map-drag and slider cursors preserve semantic affordances; reduced motion retains static cursor while hiding mesh. Browser checks passed for asset decode, links/buttons, navigation, text entry, disabled/active state, reduced motion, and touch-device tap navigation. No backend or integration changes.
 - P0: No known unresolved core functional bugs from scoped tests.
 - P1: Expand verified pandal catalogue and official recording selections; organizer-confirmed 2026 dates, access information and entry points closer to festival; shareable read-only trail links.
 - P1: Commission/licence sculpted 3D idol and true photogrammetric pandal assets if exact real-pandal replicas desired.
