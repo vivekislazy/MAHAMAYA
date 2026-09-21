@@ -28,10 +28,12 @@ async def lifespan(app):
     await db.itineraries.create_index('visitor_id', unique=True)
     for item in PANDALS:
         await db.pandals.update_one({'id': item['id']}, {'$set': item.copy()}, upsert=True)
+    await seed_demo_supporters(db)
     yield
     client.close()
 
 app = FastAPI(title='Mahamaya Cultural Guide', lifespan=lifespan)
+app.state.db = db
 app.add_middleware(CORSMiddleware, allow_origins=os.environ['CORS_ORIGINS'].split(','), allow_methods=['GET','POST','PUT'], allow_headers=['Content-Type'])
 api = APIRouter(prefix='/api')
 
@@ -135,4 +137,6 @@ async def create_story(data: StoryInput, request: Request):
             yield 'data: ' + json.dumps({'error': 'The storyteller is resting. Please try again shortly.'}) + '\n\n'
     return StreamingResponse(stream(), media_type='text/event-stream', headers={'Cache-Control': 'no-cache', 'X-Accel-Buffering': 'no'})
 
+from donations import router as donations_router, seed_demo_supporters
+api.include_router(donations_router)
 app.include_router(api)
